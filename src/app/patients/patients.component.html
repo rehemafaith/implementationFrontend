@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-danger" style="height:80px;">
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" >
+          <li class="breadcrumb-item" style="color: white;">Dashboard</li>
+          <li class="breadcrumb-item " style="color: white;">Patients</li>
+        </ol>
+        <h4 style="color: white;">Patients - List</h4 >
+      </nav>
+    </div>
+  </nav><div class="row">
+    <div class="col-md-4">
+        <app-home></app-home>
+    </div>
+   
+    <div class="col-md-8">
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                  <div class="col-lg-4 col-md-12" *ngFor="let patient of PatientsList" >
+                    <br>
+                    <div class="card" >
+                        <br>
+                        <div class=" d-flex align-items-center justify-content-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" class="card-img-top rounded-circle shadow-6-strong mb-4" style="width: 150px;" alt="Gyna"/>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title text-center">{{patient.patientFullName}}</h5>
+                          <br>
+                          
+                          <h6 class="card-subtitle mb-2 text-muted"><i class="fa fa-mobile me-3 text-danger"></i>{{patient.patientMobile}}</h6>
+                          <h6 class="card-subtitle mb-2 text-muted"><i class="fa fa-envelope me-1 text-danger"></i>{{patient.patientEmail}}</h6>
+                          
+                          <hr>
+                          <br>
+                          <a href="#!" class="btn btn-primary">Patient Information</a>
+                        </div>
+                      </div>
+                      <br>
+                  </div>
+                </div>
+              </div>
+        </div> 
+    </div>
+    
+</div>
+
